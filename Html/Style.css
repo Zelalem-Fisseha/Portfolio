@@ -407,6 +407,9 @@ span{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-left: 142px;
+
+
 }
 
 #dis{
@@ -431,12 +434,10 @@ span{
 }
 #write{
     width: 447px;
-    height: 170px;
+    height: 100px;
 
 }
-#form{
-    margin-left: 142px;
-}
+
 
 
 
