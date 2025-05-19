@@ -82,7 +82,7 @@
     <div id="desc">
         <h1 id="Tonic">Tonic</h1>
         <div id="infos">
-            <p id="info">CANOPY</p>
+                           <p id="info">CANOPY</p>
             <img src="/Resource/Counter.png" alt="image" class="Dots">
             <p id="info2">Back End Dev</p>
             <img src="/Resource/Counter.png" alt="image" class="Dots">
@@ -216,7 +216,92 @@
         </div>
 
         <div id="langss">
-            <div id="Image"><img src="/Resource/Skill List.svg" alt="image" id="He"></div>
+            <!-- Skills dropdown section -->
+            <div class="skills-container">
+                <!-- Languages dropdown -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <h3>Languages</h3>
+                        <div class="dropdown-arrow">▼</div>
+                    </div>
+                    <div class="skill-list">
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-icon language">J</div>
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon language">H</div>
+                                <span>HTML</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon language">C</div>
+                                <span>CSS</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon language">R</div>
+                                <span>Ruby</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Frameworks dropdown -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <h3>Frameworks</h3>
+                        <div class="dropdown-arrow">▼</div>
+                    </div>
+                    <div class="skill-list collapsed">
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-icon framework">R</div>
+                                <span>React</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon framework">B</div>
+                                <span>Bootstrap</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon framework">R</div>
+                                <span>Ruby on Rails</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon framework">V</div>
+                                <span>Vue.js</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Skills dropdown -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <h3>Skills</h3>
+                        <div class="dropdown-arrow">▼</div>
+                    </div>
+                    <div class="skill-list collapsed">
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-icon skill">G</div>
+                                <span>Git/GitHub</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon skill">C</div>
+                                <span>Command Line</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon skill">T</div>
+                                <span>TDD</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-icon skill">R</div>
+                                <span>Responsive Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -251,14 +336,27 @@
                     a feature that you need built or a project that needs coding.
                     I’d love to help with it!
                 </p>
-                <div id="form">
-                    <input type="text" placeholder="Lorem Ipsum" required id="text" />
-                    <input type="email" placeholder="loremipsum@gmail.com" required id="email"/>
-                    <textarea placeholder="Write your message here..." required id="write"></textarea>
-                </div>
+                <form id="contact-form" novalidate>
+                    <div id="form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required id="text" name="name" />
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="your.email@example.com" required id="email" name="email"/>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Write your message here..." required id="write" name="message"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-status" id="form-status"></div>
+                </form>
 
             </div>
-            <button type="submit" id="but">Get in touch</button>
+            <button type="submit" id="but" form="contact-form">Get in touch</button>
 
         </SECTION>
 
@@ -279,5 +377,36 @@
 
 
 
+<!-- Project Modal Overlay -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title">Project Title</h2>
+        <div class="modal-info">
+            <p id="modal-company">CANOPY</p>
+            <img src="/Resource/Counter.png" alt="image" class="Dots">
+            <p id="modal-role">Back End Dev</p>
+            <img src="/Resource/Counter.png" alt="image" class="Dots">
+            <p id="modal-year">2024</p>
+        </div>
+        <div class="modal-image">
+            <img id="modal-img" src="/Resource/he.png" alt="Project Image">
+        </div>
+        <div class="modal-description">
+            <p id="modal-para">A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+        </div>
+        <div class="modal-technologies">
+            <button class="Bs">Html</button>
+            <button class="Bs">Css</button>
+            <button class="Bs">JavaScript</button>
+        </div>
+        <div class="modal-buttons">
+            <a href="#" class="modal-button">See Live <img src="/Resource/github.svg" alt="Live Icon"></a>
+            <a href="#" class="modal-button">See Source <img src="/Resource/github.svg" alt="Source Icon"></a>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
